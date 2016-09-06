@@ -14,7 +14,7 @@
 	 	var r = window.location.search.substr(1).match(reg);
 	 	if(r!=null)return  unescape(r[2]); return null;
 	}
-
+	var mh="";
 	function init(){
 		var rtmpaddress = getQueryString("a");
 		var width = getQueryString("w");
@@ -33,7 +33,8 @@
 		la = la + "<embed src='swfs/StrobeMediaPlayback.swf' width='"+iw+"' height='"+ih+"' id='StrobeMediaPlayback' quality='high' bgcolor='#000000' name='StrobeMediaPlayback' allowfullscreen='true' ";
 		la = la + "pluginspage='http://www.adobe.com/go/getflashplayer' flashvars='&"+rtmpaddress+"&autoHideControlBar=true&streamType=live&autoPlay=true&verbose=true' type='application/x-shockwave-flash'>";
 		la = la + " </embed></object>";
-		document.getElementById("main").innerHTML = la
+		mh=la;
+		document.getElementById("main").innerHTML = mh;
 	}
 	init();
 
