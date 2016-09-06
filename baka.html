@@ -21,10 +21,11 @@
 		if(width==null){
 			width=848;
 		}
+		var height = getQueryString("h");
 		if(height==null){
 			height=480;
 		}
-		var height = getQueryString("h");
+		
 		var iw = width-1;
 		var ih = height-1;
 		var la = "<object width='"+width+"' height='"+height+"' id='StrobeMediaPlayback' name='StrobeMediaPlayback' type='application/x-shockwave-flash' classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000' >";
