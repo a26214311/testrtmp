@@ -177,7 +177,7 @@ a:active {
 			queryParameters['idx'] = getUrlParam('idx');
 
 			if( queryParameters['source'] == "" )
-				queryParameters['source'] = "rtmp://124.65.37.154:1936/live/baka?ticket=baka";
+				queryParameters['source'] = "rtmp://124.65.37.154:1935/live";
 			
 			if( queryParameters['type'] == "" )
 				queryParameters['type'] = "live";
@@ -296,27 +296,7 @@ a:active {
         <area shape="rect" coords="20,21,55,61" href="http://www.adobe.com" target="_blank" />
       </map>
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td width="61" colspan="4" bgcolor="#191919"><table width="100" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td width="93%"><table width="98%" border="0" cellpadding="0" cellspacing="0">
-                        
-                        <tr>
-                          <td colspan="4" align="left" bgcolor="#191919"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                            <tr>
-                              <td><img src="images/top_bar_border.gif" width="1000" height="15" /></td>
-                            </tr>
-                            <tr>
-                              <td><img src="images/title.gif" width="1000" height="66" border="0" usemap="#Map" /></td>
-                            </tr>
-                          </table></td>
-                        </tr>
-                        <tr>
-                          <td colspan="4" align="left" bgcolor="#191919"><img src="images/canvas.gif" alt="" name="index_r4_c3" width="1000" height="39" border="0" id="index_r4_c3"/></td>
-                        </tr>
-                        
+
                         <tr>
                           <td colspan="4" align="left" bgcolor="#191919"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
@@ -344,30 +324,6 @@ a:active {
 								  </td>
                                 </tr>
                               </table></td>
-                              <td width="36%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-
-
-
-                                  </table></td>
-                                </tr>
-                                <tr>
-                                  <td width="359" height="77" background="images/lowerright_07.gif"><table width="358" border="0" cellspacing="0" cellpadding="0">
-
-                                    <tr>
-                                      <td colspan="2"><img src="images/spacer.gif" width="20" height="10" /></td>
-                                      <td width="322" class="style75"></td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2"><img src="images/spacer.gif" width="20" height="5" /></td>
-                                      </tr>
-                                    <tr>
-                                      <td><img src="images/spacer.gif" width="20" height="10" /></td>
-									  <td id="sel11"><span class="style74"></span></td>
-                                      <td id="td11" class="style76"></td>
-                                    </tr>
-                                  </table></td>
-                                </tr>
-                              </table></td>
                             </tr>
                           </table></td>
                         </tr>
@@ -382,106 +338,6 @@ a:active {
       </table></td>
    </tr>
   <tr>
-    <td colspan="2" valign="top" bgcolor="#191919"><table width="100" border="0" align="left" cellpadding="0" cellspacing="0">
-        <!-- fwtable fwsrc="080715_fms_splash_fireworks.png" fwbase="index.gif" fwstyle="Dreamweaver" fwdocid = "1526025482" fwnested="0" -->
-        <tr>
-          <td colspan="3" valign="top"><img src="images/spacer.gif" width="55" height="40" /></td>
-        </tr>
-        <tr>
-          <td colspan="3" valign="top"><table width="87%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td><span class="style69"></span></td>
-            </tr>
-            <tr>
-              <td bgcolor="#666666"><img src="images/spacer.gif" width="20" height="3" /></td>
-            </tr>
-            
-            <tr>
-              <td><img src="images/spacer.gif" width="55" height="10" /></td>
-            </tr>
-            <tr>
-              <td><table width="1055" border="0" align="left" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td width="8%"><table width="86" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td align="left"><span class="style73">STREAM URL:</span></td>
-                    </tr>
-                  </table></td>
-                  <td align="left"></td>
-                  <td align="left"><input name="inputURL" type="text" id="inputURL" size="80" maxlength="80" /></td>
-                  <td width="42%" align="left"><table width="100" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td width="5%" align="left"><img src="images/spacer.gif" width="10" height="10" /></td>
-                      <td width="7%" align="left"><table width="0" >
-                          <tr>
-                            <td align="left"><div align="center">
-                                <input type="checkbox" name="checkbox" id="vodCheckbox" onclick="checkbox('vod');" />
-                            </div></td>
-                          </tr>
-                      </table></td>
-                      <td width="2%" align="left"><img src="images/spacer.gif" width="10" height="10" /></td>
-                      <td width="6%" align="left"><div align="center"><span class="style31">VOD</span></div></td>
-                      <td width="5%" align="left"><img src="images/spacer.gif" width="10" height="10" /></td>
-                      <td width="5%" align="left"><div align="center">
-                          <input type="checkbox" name="checkbox2" id="liveCheckbox" checked onclick="checkbox('live');" />
-                      </div></td>
-                      <td width="2%" align="left"><img src="images/spacer.gif" width="10" height="10" /></td>
-                      <td width="6%" align="left"><span class="style31">LIVE</span></td>
-                      <td width="5%" align="left"><img src="images/spacer.gif" width="10" height="10" /></td>
-                      <td width="27%" align="left"><a id="playBtn" onclick="javascript:playStream();"><img src="images/playstream_10.gif" width="104" height="25" /></a></td>
-                      <td align="left">&nbsp;</td>
-                    </tr>
-                  </table></td>
-                  </tr>
-                <tr>
-                  <td colspan="2">&nbsp;</td>
-                  <td align="left" class="style74"></td>
-                  <td>&nbsp;</td>
-                  </tr>
-                <tr>
-                  <td colspan="4">&nbsp;</td>
-                </tr>
-              </table></td>
-            </tr>
-          </table></td>
-        </tr>
-        <tr>
-          <td colspan="3" valign="top"><table width="100" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td colspan="3">&nbsp;</td>
-            </tr>
-            <tr>
-              <td colspan="3"><span class="style73"></span></td>
-            </tr>
-            <tr>
-              <td colspan="3"><span class="style75"></span></td>
-            </tr>
-            <tr>
-              <td colspan="3"><span class="style67"><img src="images/spacer.gif" width="56" height="10" /></span></td>
-            </tr>
-            <tr>
-
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr>
-
-</tr></table>
-</td>
-						  </tr>
-
-
-
-
-
-
-
-
-
-                            </table></td>
-                          </tr>
-                          <tr>
-                            <td class="style34">&nbsp;</td>
-                          </tr>
-                        </table></td>
                       </tr>
                       
                     </table>
@@ -504,29 +360,7 @@ a:active {
     </table></td>
    </tr>
   
-  <tr>
-    <td colspan="2" valign="top" bgcolor="#191919"><table width="1000" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td width="1055" height="24" valign="middle" background="images/footer_bar.gif"><table width="99%" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td width="1055"><div align="right" class="style81"><span class="style82">Copyright © baka 2016.&nbsp; &nbsp;</span><span class="style83">All rights reserved.</span></div></td>
-          </tr>
-        </table></td>
-        </tr>
-      <tr>
-        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td width="99%" valign="top"><div align="right" class="style22">
-            </div></td>
-            <td width="1%" valign="top"><img src="images/spacer.gif" width="13" height="10" /></td>
-          </tr>
-        </table></td>
-      </tr>
-    </table></td>
-   </tr>
-  <tr>
-    <td colspan="2" valign="top" bgcolor="#191919"><img src="images/spacer.gif" width="55" height="60" /></td>
-  </tr>
+
 </table>
 
 
