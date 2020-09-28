@@ -1,0 +1,303 @@
+<!--
+<!--
+/*
+ * (C) Copyright 2011 Adobe Systems Incorporated. All Rights Reserved.
+ *
+ * NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the 
+ * terms of the Adobe license agreement accompanying it.  If you have received this file from a 
+ * source other than Adobe, then your use, modification, or distribution of it requires the prior 
+ * written permission of Adobe. 
+ * THIS CODE AND INFORMATION IS PROVIDED "AS-IS" WITHOUT WARRANTY OF
+ * ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+ * PARTICULAR PURPOSE.
+ *
+ *  THIS CODE IS NOT SUPPORTED BY Adobe Systems Incorporated.
+ *
+ */
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Baka Live Media Server</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style type="text/css">
+  * {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  .video-container {
+    height: 100%;
+  }
+  .video-container object {
+    width: 100%;
+    height: 100%;
+  }
+td img {display: block;}body {
+	background-color: #191919;
+}
+a:link {
+	text-decoration: none;
+	color: #F00;
+}
+a:hover {
+	text-decoration: underline;
+	color: #F00;
+}
+a:visited {
+	text-decoration: none;
+	color: #F00;
+}
+a:active {
+	text-decoration: none;
+	color: #F00;
+}
+.style22 {
+	color: #666666;
+}
+.style23 {
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px;
+}
+.style31 {
+	font-family: "Arial";
+	color: #999999;
+	font-size: 12px;
+	font-weight: bold;
+}
+.style34 {
+	font-family: "Arial";
+}
+.style24 {	font-size: 11px;
+	color: #999999;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style62 {
+	font-size: 12px; color: #999999; 
+	font-family: "myriad Pro"; 
+}
+.style67 {
+	font-family: "myriad Pro";
+	color: #999999;
+	font-size: 12px;
+	font-weight: bold;
+}
+.style69 {
+	font-family: "Arial";
+	color: #999999;
+	font-weight: bold;
+}
+.style1 {	
+	font-family: Arial, Helvetica, sans-serif;
+	color: #999999;
+	font-size: 14px;
+	font-weight: bold;
+}
+.style3 {
+	font-family: "Arial";
+	font-size: 12px;
+	line-height: normal;
+	height: 10px;
+}
+.style71 {
+	font-family: "myriad Pro";
+}
+.style73 {
+	font-family: Arial; 
+	color: #999999; 
+	font-size: 12px; 
+	font-weight: bold; 
+}
+.style74 {
+	font-size: 12px; 
+	color: #999999; 
+	font-family: Arial; 
+}
+.style75 {
+	font-family: Arial;
+	color: #CCC;
+	font-size: 12px;
+	font-weight: bold;
+}
+.style76 {
+	font-size: 12px;
+	font-family: Arial;
+	color: #FF0000;
+}
+.style81 {
+	font-family: Arial;
+}
+.style82 {
+	color: #999999; 
+	font-size: 12px;
+}
+.style83 {
+	font-size: 12px; 
+	font-weight: bold; 
+	color: #999999;
+}
+</style>
+
+<!-- functionality -->
+<script type="text/javascript" src="scripts/swfobject.js"></script>
+    <script language="javascript">
+
+		var queryParameters = new Array();
+          var flashVars = "";
+		var tag = "";
+		var url = "";
+        
+        window.onload = function ()
+        {
+ 			document.getElementById( 'inputURL' ).value = queryParameters['source'];
+
+			for(var i=1 ; i<=10;i++)
+			{
+
+			}
+
+			// mark the entry for that index
+			if(queryParameters['idx'] != "")
+			{
+			}
+
+		}
+
+        function initialise() 
+        {
+            
+
+			function getUrlParam( name )
+			{
+				  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+				  var regexS = "[\\?&]"+name+"=([^&#]*)";
+				  var regex = new RegExp( regexS );
+				  var results = regex.exec( window.location.href );
+				  if( results == null )
+						return "";
+				  else
+						return unescape( results[1] );
+			}
+
+			queryParameters['source'] = getUrlParam('source');
+			queryParameters['type'] = getUrlParam('type');
+			queryParameters['idx'] = getUrlParam('idx');
+
+			if( queryParameters['source'] == "" )
+				queryParameters['source'] = "rtmp://124.65.37.154:1935/live/aaa";
+			
+			if( queryParameters['type'] == "" )
+				queryParameters['type'] = "live";
+				
+			if( queryParameters['idx'] == "" )
+				queryParameters['idx'] = "2";
+
+			flashVars += "&src=";
+            flashVars += queryParameters['source'];
+
+            flashVars += "&autoHideControlBar=";
+            flashVars += unescape("true");
+
+            flashVars += "&streamType=";
+            flashVars += queryParameters['type'];
+
+            flashVars += "&autoPlay=";
+            flashVars += unescape("true");
+		  
+		  flashVars += "&verbose=";
+		  flashVars += "true";
+
+            var soFlashVars = {
+                src: queryParameters['source'],
+			 streamType: queryParameters['type'],
+                autoPlay: "true",
+                controlBarAutoHide: "true",
+                controlBarPosition: "bottom"
+            };
+
+ 			tag = "&lt;object width='998' height='564' id='StrobeMediaPlayback' name='StrobeMediaPlayback' type='application/x-shockwave-flash' classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000' &gt;&lt;param name='movie' value='swfs/StrobeMediaPlayback.swf' /&gt; &lt;param name='quality' value='high' /&gt; &lt;param name='bgcolor' value='#000000' /&gt; &lt;param name='allowfullscreen' value='true' /&gt; &lt;param name='flashvars' value= '"+
+			flashVars+"'/&gt;&lt;embed src='swfs/StrobeMediaPlayback.swf' width='998' height='564' id='StrobeMediaPlayback' quality='high' bgcolor='#000000' name='StrobeMediaPlayback' allowfullscreen='true' pluginspage='http://www.adobe.com/go/getflashplayer'   flashvars='"+ flashVars +"' type='application/x-shockwave-flash'&gt; &lt;/embed&gt;&lt;/object&gt;";
+
+		<!-- For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. -->
+		var swfVersionStr = "10.3.0";
+		<!-- To use express install, set to playerProductInstall.swf, otherwise the empty string. -->
+		var xiSwfUrlStr = "swfs/playerProductInstall.swf";
+		var params = {};
+		params.quality = "high";
+		params.bgcolor = "#000000";
+		params.allowscriptaccess = "sameDomain";
+		params.allowfullscreen = "true";           
+		var attributes = {};
+		attributes.id = "StrobeMediaPlayback";
+		attributes.name = "StrobeMediaPlayback";
+		attributes.align = "middle";
+		swfobject.embedSWF("swfs/StrobeMediaPlayback.swf", "flashContent", "998", "564", swfVersionStr, xiSwfUrlStr, soFlashVars, params, attributes);
+		<!-- JavaScript enabled so display the flashContent div in case it is not replaced with a swf object. -->
+		swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+        } 
+
+		function playStream()
+		{
+			var url = "source=" + document.getElementById('inputURL').value;
+			var type;
+
+			if(document.getElementById('vodCheckbox').checked==true)
+				type="vod";
+			else
+				type="live";
+
+			url += ("&type=" + type);
+
+			document.getElementById('playBtn').href="videoplayer.html?" + url;
+
+		}
+
+		function checkbox(type)
+		{
+			if(type=="vod")
+			{
+				if(document.getElementById('liveCheckbox').checked==true)
+				{
+					document.getElementById('liveCheckbox').checked=false;
+				}
+			}
+			if(type=="live")
+			{
+				if(document.getElementById('vodCheckbox').checked==true)
+				{
+					document.getElementById('vodCheckbox').checked=false;
+				}
+			}
+		}
+
+		initialise();
+
+    </script>
+
+</head>
+<body>
+
+<div class="video-container">
+  <div id="flashContent">
+    <p>To view this page ensure that Adobe Flash Player version 10.3.0 or greater is installed.</p>
+    <script type="text/javascript">
+      var pageHost = ((document.location.protocol == "https:") ? "https://" :	"http://");
+      document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='"
+        + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" );
+    </script>
+  </div>
+</div>
+
+
+
+</body>
+</html>
